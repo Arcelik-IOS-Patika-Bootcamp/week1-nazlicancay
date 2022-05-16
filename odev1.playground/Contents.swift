@@ -45,5 +45,22 @@ seperateNumbers(numbers: numbers)
 evenNumbers
 oddNumbers
 
+/// creating a list to store grade of the students
+var grades : [String:Int] = [:]
+
+grades["ali"] = 70
+grades["veli"] = 60
+grades["ayşe"] = 90
+grades["fatma"] = 80
+
+func averageGrade(grades: [String:Int])->(String,Int){
+    var avarage = 0
+    for grade in grades {
+       avarage += grade.value
+    }
+    return ("The avarage of the class is",avarage / grades.count)
+}
+averageGrade(grades: grades)
+
 
 
