@@ -62,5 +62,39 @@ func averageGrade(grades: [String:Int])->(String,Int){
 }
 averageGrade(grades: grades)
 
+/// phone struct
+struct Phones{
+    var name : String
+    var cost : Int
+    var model : String
+    
+    init(name : String ,cost : Int, model : String) {
+        self.name = name
+        self.cost = cost
+        self.model = model
+    }
+
+}
+
+/// creating an array which store the phones in an array
+
+var phone1 = Phones(name: "samsung", cost: 2000, model: "a70")
+
+var phone2 = Phones(name: "iphone", cost: 6000, model: "5s")
+
+var phone3 = Phones(name: "xomia", cost: 4000, model: "redmi10")
+
+var storePhones : [Phones] = [phone1,phone2,phone3]
+
+/// function to print all the phone in store
+
+func listPhones(storePhones : [Phones]) {
+    for phone in storePhones{
+        print(" phone name :" ,phone.name ," model :", phone.model, " cost : " ,phone.cost)
+    }
+}
+
+listPhones(storePhones: storePhones)
+
 
 
