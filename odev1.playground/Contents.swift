@@ -96,5 +96,55 @@ func listPhones(storePhones : [Phones]) {
 
 listPhones(storePhones: storePhones)
 
+class Aliens {
+    var name :String
+    var power : Int
+    init(name : String , power : Int) {
+        self.name = name
+        self.power = power
+    }
+}
 
+class Humans {
+    var name : String
+    var power : Int
+    
+    init(name : String , power : Int) {
+        self.name = name
+        self.power = power
+    }
+}
+
+/// creating aliens and creating an array to store aliens
+
+var alien1 = Aliens(name: "alien1", power: 4)
+var alien2 = Aliens(name: "alien2", power: 8)
+var alien3 = Aliens(name: "alien3", power: 6)
+
+var aliens:[Aliens] = [alien1 , alien2 , alien3]
+
+/// crating humans and creating an array to store humans
+
+var human1 = Humans(name: "ally", power: 5)
+var human2 = Humans(name: "mark", power: 6)
+var human3 = Humans (name: "john", power: 4)
+
+var humans:[Humans] = [ human1 , human2,human3]
+
+func war(aliens:[Aliens], humans:[Humans]) -> (String , String,String) {
+    for human in humans{
+        for alien in aliens {
+            if( alien.power > human.power){
+               print (human.name ," cant defeat" , alien.name)
+            }
+            
+            else{
+               print(human.name ," can defeat" , alien.name)
+            }
+        }
+    }
+    return ("" ," " , "")
+}
+
+war(aliens: aliens, humans: humans)
 
